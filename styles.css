@@ -1,0 +1,13 @@
+#canvas {
+    display: flex;
+}
+
+#canvas > div {
+    width: 150px;
+    height: 150px;
+    border: solid 1px black;
+}
+
+#canvas > div:hover {
+    background-color: blue;
+}
