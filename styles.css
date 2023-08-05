@@ -2,12 +2,12 @@
     display: flex;
 }
 
-#canvas > div {
-    width: 150px;
-    height: 150px;
+#canvas > div > div {
+    width: 20px;
+    height: 20px;
     border: solid 1px black;
 }
 
-#canvas > div:hover {
+#canvas > div > div:hover {
     background-color: blue;
 }

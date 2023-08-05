@@ -5,9 +5,17 @@ const canvas = document.getElementById('canvas');
 function createCanvas () {
     let i = 0;
     while (i < 16) {
-        let newDiv = document.createElement('div');
-        newDiv.textContent = i + 1;
-        canvas.appendChild(newDiv)
+        let newRow = document.createElement('div');
+
+        let j = 0;
+        while (j < 16) {
+            let newColumn = document.createElement('div');
+            newRow.appendChild(newColumn)
+
+            j++;
+        }
+        
+        canvas.appendChild(newRow);
 
         i++;
     }
