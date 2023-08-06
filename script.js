@@ -28,5 +28,6 @@ let button = document.getElementById('create');
 button.addEventListener('click', function() {
     let input = prompt('Grid Width: ', 1);
 
-    createCanvas(input);
+    // Limits to 100 x 100 canvas
+    createCanvas(input > 100 ? 100 : input);
 })
