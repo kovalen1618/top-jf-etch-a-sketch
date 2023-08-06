@@ -1,14 +1,17 @@
 // Get container element to place canvas divs within
 const canvas = document.getElementById('canvas');
 
-// Create canvas with 16 divs
-function createCanvas () {
+// Create canvas with 'input' divs
+function createCanvas (input) {
+    // Resets canvas
+    canvas.textContent = '';
+
     let i = 0;
-    while (i < 16) {
+    while (i < input) {
         let newRow = document.createElement('div');
 
         let j = 0;
-        while (j < 16) {
+        while (j < input) {
             let newColumn = document.createElement('div');
             newRow.appendChild(newColumn)
 
@@ -21,4 +24,9 @@ function createCanvas () {
     }
 }
 
-createCanvas();
+let button = document.getElementById('create');
+button.addEventListener('click', function() {
+    let input = prompt('Grid Width: ', 1);
+
+    createCanvas(input);
+})
